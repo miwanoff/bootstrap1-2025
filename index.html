@@ -5,37 +5,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Lorem, ipsum.</h1>
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://www.w3schools.com/bootstrap5/img_avatar1.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"> 
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </nav>
+    <header class="container mt-3">
+        <h2>Example of Jumbotron</h2>
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Jumbotron Example</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat..</p>
+            <button type="button" class="btn btn-info">Info</button>
+        </div>
     </header>
     <main>
-        <section id="sect1"  class="container">
-            <h2>Lorem, ipsum dolor.</h2>
-            <img src="images/fl1.jpg" alt="" class="main_img">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nisi quod qui dignissimos reprehenderit,
-                sit placeat sint obcaecati recusandae consequuntur? Recusandae voluptatem suscipit molestiae ipsam magni
-                vero placeat quos maxime?</p>
-            <p>Aliquam nobis rem, veniam perferendis saepe voluptate id nihil vero consequatur! Modi in dicta molestiae
-                ad dignissimos, accusantium officiis blanditiis expedita dolores deserunt distinctio officia consectetur
-                tenetur eius minima maiores.</p>
-            <p>Vitae, voluptate corporis. Quaerat, inventore nemo molestias facere tenetur distinctio quod ratione quos
-                veniam voluptates magni temporibus aliquid sapiente aperiam cum perferendis, amet illum sint dolorum
-                iusto non quis quas?</p>
-            <p>Tempore, unde doloremque? Nihil numquam et delectus voluptatum sint eos voluptatibus vel, est aspernatur
-                autem minima provident eaque officia nemo impedit sit distinctio velit error libero laborum earum
-                ducimus eveniet?</p>
-            <p>Consectetur, libero? Soluta eum magnam aperiam ipsam! Voluptas cumque doloremque aliquid corporis magnam
-                sit eius soluta adipisci, et vel sint doloribus debitis iure dolores molestiae unde laboriosam nostrum
-                enim. Nesciunt?</p>
-            <p>Nostrum exercitationem debitis rerum voluptates, quos harum veritatis quidem tempore odio maiores nemo,
-                laboriosam saepe in doloribus ipsum? Fugiat eos in saepe reprehenderit odio illum dolores, deserunt
-                aperiam itaque magnam.</p>
+        <section id="sect1" class="container">
+
+            <div class="row first-row">
+                <div class="col-2  p-3"><img src="images/fl1.jpg" alt=""></div>
+                <div class="col-2  p-3"><img src="images/fl1.jpg" alt=""></div>
+                <div class="col-2 p-3"><img src="images/fl1.jpg" alt=""></div>
+                <div class="col-2  p-3"><img src="images/fl1.jpg" alt=""></div>
+                <div class="col-2  p-3"><img src="images/fl1.jpg" alt=""></div>
+                <div class="col-2  p-3"><img src="images/fl1.jpg" alt=""></div>
+            </div>
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.w3schools.com/bootstrap5/la.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.w3schools.com/bootstrap5/chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.w3schools.com/bootstrap5/ny.jpg" alt="New York" class="d-block" style="width:100%">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <div class="container-fluid mt-3">
+                <h3>Carousel Example</h3>
+                <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+            </div>
+            <div class="row bg-info">
+                <div class="col-8">col-8</div>
+                <div class="col-4">col-4</div>
+            </div>
+            <div class="row">
+                <h2>Lorem, ipsum dolor.</h2>
+                <img src="images/fl1.jpg" alt="" class="main_img rounded-circle">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nisi quod qui dignissimos
+                    reprehenderit,
+                    sit placeat sint obcaecati recusandae consequuntur? Recusandae voluptatem suscipit molestiae ipsam
+                    magni
+                    vero placeat quos maxime?</p>
+                <div class="container m-3">
+                    <h2>Hover Rows</h2>
+                    <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+                    <table class="table table-hover table-dark">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Aliquam nobis rem, veniam perferendis saepe voluptate id nihil vero consequatur! Modi in dicta
+                    molestiae
+                    ad dignissimos, accusantium officiis blanditiis expedita dolores deserunt distinctio officia
+                    consectetur
+                    tenetur eius minima maiores.</p>
+                <p>Vitae, voluptate corporis. Quaerat, inventore nemo molestias facere tenetur distinctio quod ratione
+                    quos
+                    veniam voluptates magni temporibus aliquid sapiente aperiam cum perferendis, amet illum sint dolorum
+                    iusto non quis quas?</p>
+                <p>Tempore, unde doloremque? Nihil numquam et delectus voluptatum sint eos voluptatibus vel, est
+                    aspernatur
+                    autem minima provident eaque officia nemo impedit sit distinctio velit error libero laborum earum
+                    ducimus eveniet?</p>
+                <p>Consectetur, libero? Soluta eum magnam aperiam ipsam! Voluptas cumque doloremque aliquid corporis
+                    magnam
+                    sit eius soluta adipisci, et vel sint doloribus debitis iure dolores molestiae unde laboriosam
+                    nostrum
+                    enim. Nesciunt?</p>
+                <p>Nostrum exercitationem debitis rerum voluptates, quos harum veritatis quidem tempore odio maiores
+                    nemo,
+                    laboriosam saepe in doloribus ipsum? Fugiat eos in saepe reprehenderit odio illum dolores, deserunt
+                    aperiam itaque magnam.</p>
+            </div>
         </section>
-        <section id="sect2"  class="container">
+        <section id="sect2" class="container">
             <h2>Consequatur, magnam corrupti.</h2>
             <img src="images/fl2.jpg" alt="" class="main_img">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quasi nobis qui labore voluptatem
@@ -56,7 +179,7 @@
                 aliquam sint fugiat consequuntur voluptatibus mollitia, dicta aperiam culpa nulla reprehenderit atque
                 sunt modi? Beatae, aspernatur.</p>
         </section>
-        <section id="sect3"  class="container">
+        <section id="sect3" class="container">
             <h2>Quod, dolorem corrupti?</h2>
             <img src="images/fl1.jpg" alt="" class="main_img">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo soluta vel maxime beatae at architecto
@@ -78,7 +201,7 @@
                 vitae repellat voluptatibus veritatis mollitia laudantium. Alias expedita molestiae minima accusantium
                 minus, amet temporibus voluptas cum!</p>
         </section>
-        <section id="sect4"  class="container">
+        <section id="sect4" class="container">
             <h2>Dolorem, consequuntur unde!</h2>
             <img src="images/fl2.jpg" alt="" class="main_img">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda veritatis dolores dignissimos
@@ -103,7 +226,10 @@
     <footer>
         <h3>2025</h3>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
